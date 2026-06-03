@@ -140,7 +140,7 @@ Menghapus fitur yang kurang berkontribusi secara bertahap hingga diperoleh kombi
 - [ ] Model Evaluation
 - [ ] Final Documentation
 
----
+--
 
 ## 🚀 Future Work
 
