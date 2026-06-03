@@ -130,15 +130,15 @@ Menghapus fitur yang kurang berkontribusi secara bertahap hingga diperoleh kombi
 
 ## 📈 Current Progress
 
-* [x] Project Setup
-* [x] Exploratory Data Analysis (EDA)
-* [x] Data Preprocessing
-* [x] Feature Selection
-* [ ] PCA Analysis
-* [ ] t-SNE Analysis
-* [ ] Model Training
-* [ ] Model Evaluation
-* [ ] Final Documentation
+- [x] Project Setup
+- [x] Exploratory Data Analysis
+- [x] Data Preprocessing
+- [x] Feature Selection
+- [x] PCA Analysis
+- [x] t-SNE Analysis
+- [ ] Model Training
+- [ ] Model Evaluation
+- [ ] Final Documentation
 
 ---
 
