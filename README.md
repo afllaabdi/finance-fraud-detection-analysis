@@ -2,9 +2,9 @@
 
 ## 📌 Overview
 
-Finance Fraud Detection Analysis adalah proyek Data Mining yang bertujuan untuk menganalisis transaksi keuangan dan mengidentifikasi aktivitas fraud menggunakan teknik Feature Selection, Dimensionality Reduction, dan Machine Learning.
+Finance Fraud Detection Analysis adalah proyek Data Mining yang bertujuan untuk mendeteksi transaksi fraud menggunakan teknik Exploratory Data Analysis (EDA), Feature Selection, Dimensionality Reduction, dan Machine Learning.
 
-Proyek ini mengikuti alur kerja Data Science mulai dari Exploratory Data Analysis (EDA), Data Preprocessing, Feature Selection, hingga pembangunan model klasifikasi fraud.
+Proyek ini mengimplementasikan alur Data Science end-to-end mulai dari eksplorasi data hingga pembangunan model klasifikasi fraud.
 
 ---
 
@@ -12,104 +12,148 @@ Proyek ini mengikuti alur kerja Data Science mulai dari Exploratory Data Analysi
 
 * Memahami karakteristik dataset transaksi keuangan.
 * Mengidentifikasi pola yang berkaitan dengan aktivitas fraud.
-* Melakukan preprocessing data untuk meningkatkan kualitas dataset.
-* Memilih fitur yang paling relevan menggunakan Feature Selection.
-* Mempersiapkan dataset untuk proses dimensionality reduction dan machine learning.
-* Membangun model klasifikasi fraud yang efektif.
+* Melakukan preprocessing dan feature selection.
+* Mengurangi dimensi data menggunakan PCA dan t-SNE.
+* Membangun model klasifikasi fraud.
+* Mengevaluasi performa model dalam mendeteksi transaksi fraud.
 
 ---
 
-## 📂 Project Structure
+## 📂 Dataset Features
 
-```text
-finance-fraud-detection-analysis/
-│
-├── data/
-│   ├── raw_dataset.csv
-│   └── processed_dataset.csv
-│
-├── notebooks/
-│   └── finance_fraud_analysis.ipynb
-│
-├── images/
-│
-├── README.md
-├── requirements.txt
-└── .gitignore
-```
+| Feature              | Description                                    |
+| -------------------- | ---------------------------------------------- |
+| Transaction_ID       | Unique transaction identifier                  |
+| Amount               | Transaction amount                             |
+| Distance_from_Home   | Distance between transaction location and home |
+| Device_Type          | Device used for transaction                    |
+| IP_Risk_Score        | Risk score of IP address                       |
+| Is_Night_Transaction | Night transaction indicator                    |
+| Is_Fraud             | Fraud label (Target Variable)                  |
 
 ---
 
 ## 🔍 Exploratory Data Analysis (EDA)
 
-Tahap EDA dilakukan untuk memahami struktur dan karakteristik dataset.
+Analysis performed:
 
-### Analysis Performed
+* Dataset overview
+* Missing value analysis
+* Descriptive statistics
+* Fraud distribution analysis
+* Correlation analysis
+* Data visualization
 
-* Dataset Overview
-* Missing Value Analysis
-* Descriptive Statistics
-* Fraud Distribution Analysis
-* Data Visualization
-* Correlation Analysis
+### Findings
 
-### Key Findings
-
-* Struktur dataset berhasil diidentifikasi.
-* Missing value telah dianalisis.
-* Distribusi target fraud telah diperiksa.
-* Karakteristik fitur numerik dan kategorikal telah dipahami.
-* Insight awal untuk preprocessing dan feature selection telah diperoleh.
+* Dataset structure identified successfully.
+* Missing values checked and handled.
+* Fraud distribution analyzed.
+* Initial insights documented.
 
 ---
 
 ## ⚙️ Data Preprocessing
 
-Tahap preprocessing dilakukan untuk mempersiapkan dataset sebelum modeling.
+Activities:
 
-### Activities
-
-* Data cleaning
-* Handling missing values
-* Encoding categorical variables
+* Missing value handling
+* Categorical encoding
+* Data validation
 * Feature-target separation
-* Dataset validation
 
-### Output
+Output:
 
-Dataset yang telah dibersihkan dan siap digunakan untuk proses feature selection.
+* Cleaned dataset ready for feature selection.
 
 ---
 
 ## 🎯 Feature Selection
 
-Untuk mengurangi fitur yang tidak relevan dan meningkatkan performa model, digunakan beberapa metode feature selection:
+Methods used:
 
-### 1. Correlation Analysis
+### Correlation Analysis
 
-Mengukur hubungan antara fitur dengan target fraud dan memilih fitur yang memiliki korelasi signifikan.
+Identified features that have significant relationships with fraud labels.
 
-### 2. Backward Elimination
+### Backward Elimination
 
-Menghapus fitur yang kurang berkontribusi secara bertahap hingga diperoleh kombinasi fitur terbaik.
+Selected the most relevant features by removing less significant variables.
 
-### Output
+Output:
 
-* Selected Features Dataset
-* Reduced Feature Space
-* Modeling-ready Dataset
+* Reduced feature set
+* Modeling-ready dataset
+
+---
+
+## 📉 Dimensionality Reduction
+
+### Principal Component Analysis (PCA)
+
+Used to reduce dimensionality while preserving maximum variance.
+
+### t-SNE
+
+Used for data visualization and cluster exploration.
+
+Output:
+
+* PCA projection
+* t-SNE visualization
+
+---
+
+## 🤖 Machine Learning Model
+
+### Model Used
+
+* Random Forest Classifier
+
+### Hyperparameter Tuning
+
+GridSearchCV was used to identify the optimal model configuration.
+
+Best Parameters:
+
+```python
+{
+    'max_depth': 10,
+    'min_samples_split': 5,
+    'n_estimators': 200
+}
+```
+
+### Model Persistence
+
+The best model was successfully saved using Joblib:
+
+```text
+best_fraud_model.pkl
+```
+
+### Prediction Example
+
+```text
+[1 0 1 0 0]
+```
+
+Where:
+
+* 1 = Fraud Transaction
+* 0 = Non-Fraud Transaction
 
 ---
 
 ## 🔄 Project Workflow
 
 1. Data Loading
-2. Exploratory Data Analysis (EDA)
+2. Exploratory Data Analysis
 3. Data Preprocessing
 4. Feature Selection
 5. PCA Analysis
 6. t-SNE Analysis
-7. Machine Learning Modeling
+7. Model Training
 8. Model Evaluation
 9. Documentation
 
@@ -123,6 +167,7 @@ Menghapus fitur yang kurang berkontribusi secara bertahap hingga diperoleh kombi
 * Matplotlib
 * Seaborn
 * Scikit-Learn
+* Joblib
 * MLxtend
 * Jupyter Notebook
 
@@ -130,26 +175,25 @@ Menghapus fitur yang kurang berkontribusi secara bertahap hingga diperoleh kombi
 
 ## 📈 Current Progress
 
-- [x] Project Setup
-- [x] Exploratory Data Analysis
-- [x] Data Preprocessing
-- [x] Feature Selection
-- [x] PCA Analysis
-- [x] t-SNE Analysis
-- [ ] Model Training
-- [ ] Model Evaluation
-- [ ] Final Documentation
+* [x] Project Setup
+* [x] Exploratory Data Analysis
+* [x] Data Preprocessing
+* [x] Feature Selection
+* [x] PCA Analysis
+* [x] t-SNE Analysis
+* [x] Model Training
+* [ ] Model Evaluation
+* [ ] Final Documentation
 
---
+---
 
-## 🚀 Future Work
+## 🚀 Next Steps
 
-* Implement Principal Component Analysis (PCA)
-* Implement t-SNE Visualization
-* Train Classification Models
-* Compare Model Performance
-* Optimize Hyperparameters
-* Deploy Fraud Detection Pipeline
+* Evaluate model performance
+* Generate confusion matrix
+* Calculate precision, recall, and F1-score
+* Compare model metrics
+* Finalize project documentation
 
 ---
 
