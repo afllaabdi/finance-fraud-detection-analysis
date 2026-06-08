@@ -1,0 +1,226 @@
+# ============================================================
+# .gitignore — Python Data Science Project
+# ============================================================
+# Source: gitignore.io (Python, DataScience, Jupyter)
+# Adapted for Finance Fraud Detection Analysis project
+# ============================================================
+
+# ─────────────────────────────────────────────────────────────
+# Byte-compiled / Optimized / DLL files
+# ─────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# ─────────────────────────────────────────────────────────────
+# Distribution / Packaging
+# ─────────────────────────────────────────────────────────────
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ─────────────────────────────────────────────────────────────
+# Jupyter Notebook
+# ─────────────────────────────────────────────────────────────
+.ipynb_checkpoints
+*.ipynb_checkpoints
+profile_default/
+ipython_config.py
+
+# IPython
+profile_default/
+ipython_config.py
+
+# Jupyter Notebook outputs
+*.html
+*.htm
+*.json
+*.md
+
+# pyenv
+.python-version
+
+# ─────────────────────────────────────────────────────────────
+# Virtual Environments
+# ─────────────────────────────────────────────────────────────
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# ─────────────────────────────────────────────────────────────
+# Model Files & Serialized Objects
+# ─────────────────────────────────────────────────────────────
+# Keep .pkl files in models/ directory, ignore loose ones
+*.pkl
+*.pickle
+*.joblib
+*.h5
+*.keras
+*.pt
+*.pth
+*.onnx
+*.pb
+
+# ─────────────────────────────────────────────────────────────
+# Data Files — Perhatikan pengecualian untuk folder data/
+# ─────────────────────────────────────────────────────────────
+# Ignore raw data files (adjust path as needed)
+# data/raw/*.csv
+# data/raw/*.xlsx
+
+# Processed data outputs (can be regenerated)
+data/processed/*.csv
+*.processed.csv
+
+# PCA / t-SNE outputs
+*.pca_dataset.csv
+*.tsne_dataset.csv
+
+# ─────────────────────────────────────────────────────────────
+# Evaluation & Logs
+# ─────────────────────────────────────────────────────────────
+logs/
+*.log
+log/
+*.logs
+
+# Experiment tracking
+experiments/
+runs/
+mlruns/
+wandb/
+tensorboard/
+*.tb.log
+
+# ─────────────────────────────────────────────────────────────
+# Visualization Outputs
+# ─────────────────────────────────────────────────────────────
+plots/
+figures/
+*.png
+*.jpg
+*.jpeg
+*.svg
+*.pdf
+*.eps
+*.gif
+
+# Matplotlib cache
+.cache/
+
+# Seaborn cache
+seaborn缓存/
+
+# ─────────────────────────────────────────────────────────────
+# IDE & Editor
+# ─────────────────────────────────────────────────────────────
+# VS Code
+.vscode/
+*.code-workspace
+
+# PyCharm / IntelliJ
+.idea/
+*.iml
+out/
+
+# Spyder
+.spyderproject
+.spyproject
+
+# Sublime
+*.sublime-*
+
+# Emacs
+*~
+.\#*
+
+# ─────────────────────────────────────────────────────────────
+# OS Files
+# ─────────────────────────────────────────────────────────────
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Linux
+.*
+!.gitignore
+
+# ─────────────────────────────────────────────────────────────
+# Confidential & Sensitive Files
+# ─────────────────────────────────────────────────────────────
+*.env.local
+*.env.development.local
+*.env.test.local
+*.env.production.local
+.env*
+secrets.yaml
+credentials.json
+*.key
+*.pem
+
+# Kaggle
+kaggle.json
+
+# ─────────────────────────────────────────────────────────────
+# Test Coverage
+# ─────────────────────────────────────────────────────────────
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+.coverage.*
+
+# ─────────────────────────────────────────────────────────────
+# Temporary / Misc
+# ─────────────────────────────────────────────────────────────
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+cython_debug/
+
+# Venv / conda
+*.bak
+
+# Study notes / drafts
+notes/
+drafts/
+todo/

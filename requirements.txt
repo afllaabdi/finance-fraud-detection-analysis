@@ -1,0 +1,66 @@
+# ============================================================
+# Finance Fraud Detection Analysis — Python Dependencies
+# ============================================================
+# Python version: 3.9+
+# Last updated: 2026
+# ============================================================
+
+# ─────────────────────────────────────────────────────────────
+# Core Data Science Stack
+# ─────────────────────────────────────────────────────────────
+numpy>=1.24.0,<2.0.0           # Numerical computing & array operations
+pandas>=2.0.0                  # Data manipulation & analysis
+scipy>=1.10.0                  # Scientific computing utilities
+
+# ─────────────────────────────────────────────────────────────
+# Machine Learning
+# ─────────────────────────────────────────────────────────────
+scikit-learn>=1.3.0            # ML algorithms, preprocessing, evaluation
+mlxtend>=0.21.0                 # Feature selection (SequentialFeatureSelector)
+
+# ─────────────────────────────────────────────────────────────
+# Visualization
+# ─────────────────────────────────────────────────────────────
+matplotlib>=3.7.0              # Low-level plotting engine
+seaborn>=0.12.0                 # Statistical data visualization (built on matplotlib)
+
+# ─────────────────────────────────────────────────────────────
+# Model Persistence
+# ─────────────────────────────────────────────────────────────
+joblib>=1.3.0                   # Serialization for model saving/loading
+
+# ─────────────────────────────────────────────────────────────
+# Jupyter & Notebook Environment
+# ─────────────────────────────────────────────────────────────
+jupyter>=1.0.0                  # Interactive computing environment
+jupyterlab>=4.0.0               # Next-gen Jupyter notebook interface
+ipykernel>=6.0.0                # IPython kernel for Jupyter
+
+# ─────────────────────────────────────────────────────────────
+# Development & Testing Utilities
+# ─────────────────────────────────────────────────────────────
+pytest>=7.4.0                   # Unit testing framework
+pytest-cov>=4.1.0               # Coverage plugin for pytest
+black>=23.0.0                   # Code formatter
+flake8>=6.0.0                   # Code linter
+isort>=5.12.0                   # Import sorter
+
+# ─────────────────────────────────────────────────────────────
+# Version Control
+# ─────────────────────────────────────────────────────────────
+gitpython>=3.1.0                # Git integration for Python
+
+# ─────────────────────────────────────────────────────────────
+# Environment & Configuration
+# ─────────────────────────────────────────────────────────────
+python-dotenv>=1.0.0            # Environment variable management
+pyyaml>=6.0                      # YAML parsing for config files
+
+# ─────────────────────────────────────────────────────────────
+# Optional: Advanced ML & Analytics
+# ─────────────────────────────────────────────────────────────
+# xgboost>=2.0.0                # Gradient boosting (optional upgrade)
+# lightgbm>=4.0.0                # Light gradient boosting (optional upgrade)
+# catboost>=0.12.0               # Categorical boosting (optional upgrade)
+# yellowbrick>=1.5                # Visual model evaluation tools
+# shap>=0.42.0                   # SHAP values for model interpretability
