@@ -182,8 +182,8 @@ Where:
 * [x] PCA Analysis
 * [x] t-SNE Analysis
 * [x] Model Training
-* [ ] Model Evaluation
-* [ ] Final Documentation
+* [x] Model Evaluation
+* [x] Final Documentation
 
 ---
 
